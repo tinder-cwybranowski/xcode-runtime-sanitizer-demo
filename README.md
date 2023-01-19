@@ -47,6 +47,10 @@ We see that the `Address Sanitizer` does not work as expected in the buildbuddy-
 
 Application execution is halted, and a call-stack identifying the runtime issue is provided.
 
+<img width="1000" alt="Screen Shot 2023-01-19 at 4 24 35 PM" src="https://user-images.githubusercontent.com/40372184/213565354-6be1978d-f209-459d-81af-a804213e15f7.png">
+
 ### Actual Outcome
 
 Application execution continues without any halts or crashes.
+
+<img width="1000" alt="Screen Shot 2023-01-19 at 4 26 22 PM" src="https://user-images.githubusercontent.com/40372184/213565652-c4f7081f-2574-48fb-9232-7ab311351cb8.png">
