@@ -1,6 +1,6 @@
 # Xcode Runtime Sanitizer Demo
 
-This project demonstrates an issue in [buildbuddy-io/rules_xcodeproj](https://github.com/buildbuddy-io/rules_xcodeproj) whereby the [Xcode Address Sanitizer](https://developer.apple.com/documentation/xcode/diagnosing-memory-thread-and-crash-issues-early) feature does not seem to work as expected. As described below, a buildbuddy-io/rules_xcodeproj Xcode project is compared to a yonaskolb/XcodeGen Xcode project to understand how a vanilla Xcode project behaves.
+This project demonstrates an issue in [buildbuddy-io/rules_xcodeproj](https://github.com/buildbuddy-io/rules_xcodeproj) whereby the [Xcode Address Sanitizer](https://developer.apple.com/documentation/xcode/diagnosing-memory-thread-and-crash-issues-early) feature does not seem to work as expected in BwB (Build-with-Bazel) mode. As described below, a buildbuddy-io/rules_xcodeproj Xcode project is compared to a yonaskolb/XcodeGen Xcode project to understand how a vanilla Xcode project behaves.
 
 This project was created to add context and reproduction steps to the [GitHub Issue opened here](https://github.com/buildbuddy-io/rules_xcodeproj/issues/1613).
 
@@ -57,3 +57,5 @@ Application execution is halted, and a call-stack identifying the runtime issue 
 Application execution continues without any halts or crashes.
 
 <img width="1000" alt="Screen Shot 2023-01-19 at 4 26 22 PM" src="https://user-images.githubusercontent.com/40372184/213565652-c4f7081f-2574-48fb-9232-7ab311351cb8.png">
+
+[As confirmed here](https://github.com/buildbuddy-io/rules_xcodeproj/issues/1613#issuecomment-1397686073), `Address Sanitizer` works as expected in BwX mode (Build-with-Xcode).
