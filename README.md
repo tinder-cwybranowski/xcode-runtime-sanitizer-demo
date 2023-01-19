@@ -12,6 +12,7 @@ These results were validated using the following configuration:
     - 32 GB memory
     - macOS 12.6 (Monterey)
 - Dependecies:
+    - Xcode 14.0.1
     - Bazel: 6.0.0
     - buildbuddy-io/rules_xcodeproj: 0.12.0
 
