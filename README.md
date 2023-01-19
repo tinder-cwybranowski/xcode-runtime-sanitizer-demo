@@ -2,6 +2,8 @@
 
 This project demonstrates an issue in [buildbuddy-io/rules_xcodeproj](https://github.com/buildbuddy-io/rules_xcodeproj) whereby the [Xcode Address Sanitizer](https://developer.apple.com/documentation/xcode/diagnosing-memory-thread-and-crash-issues-early) feature does not seem to work as expected. As described below, a buildbuddy-io/rules_xcodeproj Xcode project is compared to a yonaskolb/XcodeGen Xcode project to understand how a vanilla Xcode project behaves.
 
+This project was created to add context and reproduction steps to the [GitHub Issue opened here](https://github.com/buildbuddy-io/rules_xcodeproj/issues/1613).
+
 ## Configuration
 
 These results were validated using the following configuration:
