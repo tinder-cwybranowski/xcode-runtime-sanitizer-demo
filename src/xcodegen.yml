@@ -1,0 +1,33 @@
+name: XcodegenProject
+options:
+  bundleIdPrefix: com.example
+settings:
+  INFOPLIST_FILE: app/Info.plist
+targets:
+  App:
+    type: application
+    platform: iOS
+    deploymentTarget: "16.0"
+    sources: [app]
+    dependencies:
+      - target: SwiftLib
+      - target: ObjcLib
+  SwiftLib:
+    type: framework
+    platform: iOS
+    sources: [swift-lib]
+  ObjcLib:
+    type: framework
+    platform: iOS
+    sources: [objc-lib]
+    postBuildScripts:
+      - name: Create modulemap
+        basedOnDependencyAnalysis: false
+        script: |
+          MODULES_PATH="$CODESIGNING_FOLDER_PATH/Modules"
+          mkdir -p $MODULES_PATH
+          cat > $MODULES_PATH/module.modulemap <<- EOM
+          framework module ObjcLib {
+            header "ObjcSanitizer.h"
+          }
+          EOM
