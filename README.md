@@ -58,4 +58,8 @@ Application execution continues without any halts or crashes.
 
 <img width="1000" alt="Screen Shot 2023-01-19 at 4 26 22 PM" src="https://user-images.githubusercontent.com/40372184/213565652-c4f7081f-2574-48fb-9232-7ab311351cb8.png">
 
-[As confirmed here](https://github.com/buildbuddy-io/rules_xcodeproj/issues/1613#issuecomment-1397686073), `Address Sanitizer` works as expected in BwX mode (Build-with-Xcode).
+## Notes
+
+- [As confirmed here](https://github.com/buildbuddy-io/rules_xcodeproj/issues/1613#issuecomment-1397686073), `Address Sanitizer` works as expected in BwX mode (Build-with-Xcode).
+- [As confirmed here](https://github.com/buildbuddy-io/rules_xcodeproj/issues/1613#issuecomment-1397889562), `Address Sanitizer` works as expected for a Swift implementation in BwB mode (Build-with-Bazel).
+- [As confirmed here](https://github.com/buildbuddy-io/rules_xcodeproj/issues/1613#issuecomment-1397907992), `Address Sanitizer` works as expected for a *different* Objective-C implementation in BwB mode (Build-with-Bazel).
