@@ -21,7 +21,7 @@ struct ContentView: View {
                 SwiftSanitizer.triggerThreadSanitizer()
             }
             .foregroundColor(.blue)
-            Button("Trigger Address Sanitizer") {
+            Button("Trigger Address Sanitizer (Objc)") {
                 print("""
                 Triggering Address Sanitizer...
                 ** Ensure 'Product > Scheme > Edit Scheme > Run > Diagnostics > Address Sanitizer' is enabled to see expected tracing.
@@ -29,6 +29,14 @@ struct ContentView: View {
                 ObjcSanitizer.triggerAddressSanitizer()
             }
             .foregroundColor(.red)
+            Button("Trigger Address Sanitizer (Swift)") {
+                print("""
+                Triggering Address Sanitizer...
+                ** Ensure 'Product > Scheme > Edit Scheme > Run > Diagnostics > Address Sanitizer' is enabled to see expected tracing.
+                """)
+                SwiftSanitizer.triggerAddressSanitizer()
+            }
+            .foregroundColor(.green)
         }
         .padding()
     }
