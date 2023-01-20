@@ -10,10 +10,21 @@
 
 @implementation ObjcSanitizer : NSObject
 
-+ (void)triggerAddressSanitizer {
++ (void)triggerAddressSanitizer_example1 {
     char *buffer = malloc(80);
     buffer[80] = 'Y';
     free(buffer);
+}
+
+// [CW] 1/20/23 - Copied from:
+// https://github.com/buildbuddy-io/rules_xcodeproj/issues/1613#issuecomment-1397907992
++ (int)triggerAddressSanitizer_example2 {
+    volatile int* p;
+      {
+        volatile int x = 0;
+        p = &x;
+      }
+      return *p;
 }
 
 @end

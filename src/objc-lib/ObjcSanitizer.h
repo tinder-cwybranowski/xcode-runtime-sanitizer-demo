@@ -8,5 +8,6 @@
 #import <Foundation/Foundation.h>
 
 @interface ObjcSanitizer:NSObject
-+ (void)triggerAddressSanitizer;
++ (void)triggerAddressSanitizer_example1;
++ (int)triggerAddressSanitizer_example2;
 @end
